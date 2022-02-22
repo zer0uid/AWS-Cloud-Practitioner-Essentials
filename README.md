@@ -1,9 +1,107 @@
 [Course URL](https://explore.skillbuilder.aws/learn/course/internal/view/elearning/134/aws-cloud-practitioner-essentials?dt=tile&tile=fdt)
 
+# Table of Contents
+---
+[[#Module 1]]
+- [[#Cloud Deployment Models]]
+
+[[#Module 2 - Compute in the Cloud]]
+- [[#EC Instance Families Types]]
+- [[#Amazon EC2 pricing]]
+- [[#Scaling Amazon EC2]]
+	- [[#Auto Scaling Group]]
+- [[#Elastic Load Balancing ELB]]
+- [[#Serverless computing]]
+	- [[#AWS Lambda]]
+	- [[#Containers]]
+
+[[#Module 3]]
+- [[#AWS global infrastructure]]
+	- [[#Edge Locations]]
+		- [[#Amazon CloudFront]]
+		- [[#AWS Outposts]]
+			- [[#Key Points]]
+	- [[#How to provision AWS resources]]
+	- [[#AWS Managed Tools]]
+
+[[#Module 4 - Networking]]
+- [[#Virtual Private Cloud VPC]]
+	- [[#Subnets and Network Access Control Lists ACLs]]
+	- [[#Network Access Control Lists ACLs]]
+		- [[#Stateless packet filtering]]
+			- [[#Security Groups]]
+			- [[#Stateful packet filtering]]
+	- [[#Amazon Route 53]]
+
+[[#Module 5]]
+- [[#Storage and Databases]]
+	- [[#Instance stores and Amazon Elastic Block Store (EBS)]]
+		- [[#Instance Stores]]
+	- [[#Amazon EBS]]
+		- [[#Amazon EBS snapshot]]
+	- [[#Amazon Simple Storage Service Amazon S3]]
+		- [[#Object Storge Stored in buckets]]
+		- [[#S3 Standard]]
+		- [[#S3 Standard-Infrequent Access S3 Standard-IA]]
+		- [[#S3 One Zone-Infrequent Access S3 One Zone-IA]]
+		- [[#S3 Intelligent-Tiering]]
+		- [[#S3 Glacier]]
+		- [[#S3 Glacier Deep Archive]]
+			- [[#Comparing Amazon EBS and Amazon S3]]
+	- [[#Amazon Simple Storage Service S3]]
+	- [[#Amazon Elastic File System EFS]]
+		- [[#EBS vs EFS]]
+			- [[#Elastic Block Storage EBS]]
+			- [[#Amazon Elastic File System EFS]]
+	- [[#Amazon Relational Database service RDS]]
+		- [[#Amazon RDS]]
+		- [[#Amazon Aurora]]
+		- [[#Amazon DynamoDB]]
+		- [[#Amazon Redshift]]
+		- [[#AWS Database Migration Service AWS DMS]]
+			- [[#Additional database services]]
+
+[[#Module 6]]
+- [[#Security]]
+	- [[#AWS Shared Responsibility Module]]
+	- [[#User permissions and access]]
+	- [[#Compliance]]
+	- [[#Denial-of-service attacks]]
+	- [[#Additional Security Services]]
+
+[[#Module 7]]
+- [[#Monitoring your AWS environment]]
+- [[#Amazon CloudWatch]]
+
+[[#Module 8]]
+- [[#Pricing Support]]
+	- [[#AWS Free Tier]]
+	- [[#AWS Pricing Concepts]]
+	- [[#Billing Dashboard]]
+
+[[#Module 9]]
+- [[#Migration and Innovation]]
+	- [[#AWS Cloud Adoption Framework AWS CAF]]
+	- [[#Migration Strategies]]
+	- [[#AWS Snow Family]]
+	- [[#Innovations with AWS]]
+
+[[#Module 10]]
+- [[#The Cloud Journey]]
+	- [[#AWS Well-Architected Framework]]
+	- [[#Benefits of AWS Cloud]]
+
+[[#Module 11]]
+- [[#AWS Certified Cloud Practitioner Basics]]
+- [[#Exam domains]]
+- [[#Exam Strategies]]
+- [[#Sample questions]]
+- [[#Final Assessment]]
+---
 # Module 1
 > What is Cloud Computing: The on-demand delivery of IT resources over the internet with pay-as-you-go pricing.
 
-## The three cloud computing deployment models are cloud-based, on-premises, and hybrid.
+## Cloud Deployment Models
 1. Cloud-Based Deployment
 	- Run all parts of the application in the cloud
 	- Migrate existing applications into the cloud
@@ -21,7 +119,8 @@
 # Module 2 - Compute in the Cloud
 Vertically Scaling - Adding more memory & CPU to Virtual Machine
 
-## EC Instance Families (Types) [Reference URL](https://aws.amazon.com/ec2/instance-types/)
+## EC Instance Families (Types) 
+[Reference URL](https://aws.amazon.com/ec2/instance-types/)
 - **General Purpose** provide a balance of compute, memory, and networking resources. You can use them for a variety of workloads
 - **Compute Optimized** are ideal for compute-bound applications that benefit from high-performance processors. Like general purpose instances, you can use compute optimized instances for workloads such as web, application, and gaming servers.
 - **Memory Optimized** are designed to deliver fast performance for workloads that process large datasets in memory. In computing, memory is a temporary storage area. It holds all the data and instructions that a central processing unit (CPU) needs to be able to complete actions. Before a computer program or application is able to run, it is loaded from storage into memory. This preloading process gives the CPU direct access to the computer program.
@@ -190,11 +289,12 @@ Private IP range, contains Elastic Load Balancer >EC2 Instances & Database(s) .
 
 Within a virtual private cloud (VPC), you can organize your resources into subnets. A **subnet** is a section of a VPC that can contain resources such as Amazon EC2 instances.
 
-*Internet Gateway*
+**Internet Gateway**
 ![](https://assets.skillbuilder.aws/files/a/w/aws_prod1_docebosaas_com/1645074000/NtwMbSMph3MIi0h6H7HrNw/tincan/31d9c0cca79c54bdceaf3e938fd424e97c98c7e8/assets/Q_HnMl_BAEsDZGxf_NEblbQjD0vn0-pPU.png)
-*Virtual Private Gateway*
+**Virtual Private Gateway**
 ![](https://assets.skillbuilder.aws/files/a/w/aws_prod1_docebosaas_com/1645074000/NtwMbSMph3MIi0h6H7HrNw/tincan/31d9c0cca79c54bdceaf3e938fd424e97c98c7e8/assets/tthacSS-FyYNWwE3_s8U3lQzEONXm1FMX.png)
-*AWS DirectConnect*
+
+**AWS DirectConnect**
 ![](https://assets.skillbuilder.aws/files/a/w/aws_prod1_docebosaas_com/1645074000/NtwMbSMph3MIi0h6H7HrNw/tincan/31d9c0cca79c54bdceaf3e938fd424e97c98c7e8/assets/p53HDtoqu2euSy0Y_YdzRvczPABE_j-yV.png)
 
 ### Subnets and Network Access Control Lists (ACLs)
@@ -226,7 +326,7 @@ Security groups perform **stateful** packet filtering. They remember previous de
 **Example: How Amazon Route 53 and Amazon CloudFront deliver content**
 ![](https://assets.skillbuilder.aws/files/a/w/aws_prod1_docebosaas_com/1645074000/NtwMbSMph3MIi0h6H7HrNw/tincan/31d9c0cca79c54bdceaf3e938fd424e97c98c7e8/assets/mR1nvYoC4OSUVg9a_WE71CA369xcdceJ2.png)
 
-##### Additional Resources
+#### Additional Resources
 -   [Networking and Content Delivery on AWS](https://aws.amazon.com/products/networking)
 -   [AWS Networking & Content Delivery Blog](https://aws.amazon.com/blogs/networking-and-content-delivery/)
 -   [Amazon Virtual Private Cloud](https://aws.amazon.com/vpc)
@@ -421,20 +521,21 @@ A non-relational serverless database, don't need to manage underlying instances 
 -   [AWS Database Blog](https://aws.amazon.com/blogs/database/)
 -   [AWS Customer Stories: Databases](https://aws.amazon.com/solutions/case-studies/?customer-references-cards.sort-by=item.additionalFields.publishedDate&customer-references-cards.sort-order=desc&awsf.customer-references-location=*all&awsf.customer-references-segment=*all&awsf.customer-references-product=product%23vpc%7Cproduct%23api-gateway%7Cproduct%23cloudfront%7Cproduct%23route53%7Cproduct%23directconnect%7Cproduct%23elb&awsf.customer-references-category=category%23databases)
 
-# Security
-## AWS Shared Responsibility Module
+# Module 6
+## Security
+### AWS Shared Responsibility Module
 ![[Pasted image 20220218100608.png]]
 
 ![[Pasted image 20220218100841.png]]
 
-##### Customers: Security in the cloud
+#### Customers: Security in the cloud
 **Customers** are responsible for the security of everything that they create and put _in_ the AWS Cloud.
 
 Customers maintain complete control over content. You are responsible for managing security requirements for your content, including which content you choose to store on AWS, which AWS services you use, and who has access to that content. You also control how access rights are granted, managed, and revoked.
 
 Steps include selecting, configuring, and patching the operating systems that will run on Amazon EC2 instances, configuring security groups, and managing user accounts.
 
-##### AWS: Security of the cloud
+#### AWS: Security of the cloud
 **AWS** is responsible for security _of_ the cloud.
 
 AWS manages all layers of infrastructure. The host operating system, the virtualization layer, and the physical security of the data centers . 
@@ -456,7 +557,7 @@ IAM Features:
 -   IAM policies
 -   Multi-factor authentication
 
-##### AWS account root user (Enable MFA on this account)
+#### AWS account root user (Enable MFA on this account)
 When you first create an AWS account, you begin with an identity known as the [**root user**](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html).
 
 ```ad-note
@@ -513,7 +614,7 @@ You can use [**AWS Organizations**](https://aws.amazon.com/organizations) to con
 
 In AWS Organizations, you can centrally control permissions for the accounts in your organization by using [**service control policies (SCPs)**](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html). SCPs enable you to place restrictions on the AWS services, resources, and individual API actions that users and roles in each account can access.
 
-#### Compliance
+### Compliance
 [**AWS Artifact**](https://aws.amazon.com/artifact) is a service that provides on-demand access to AWS security and compliance reports and select online agreements. AWS Artifact consists of two main sections: **AWS Artifact Agreements** and **AWS Artifact Reports.**
 
 **AWS Artifact Agreements**
@@ -532,10 +633,10 @@ In AWS Organizations, you can centrally control permissions for the accounts in 
 -   An overview of AWS risk and compliance
 -   An auditing security checklist
 
-#### Denial-of-service attacks
+### Denial-of-service attacks
 A **denial-of-service (DoS) attack** is a deliberate attempt to make a website or application unavailable to users.
 
-##### AWS Shield
+#### AWS Shield
 
 AWS Shield is a service that protects applications against DDoS attacks. AWS Shield provides two levels of protection: Standard and Advanced.
 
@@ -545,7 +646,7 @@ AWS Shield is a service that protects applications against DDoS attacks. AWS Shi
 **AWS Shield Advanced** is a paid service that provides detailed attack diagnostics and the ability to detect and mitigate sophisticated DDoS attacks. 
 - It also integrates with other services such as Amazon CloudFront, Amazon Route 53, and Elastic Load Balancing. Additionally, you can integrate AWS Shield with AWS WAF by writing custom rules to mitigate complex DDoS attacks.
 
-#### Additional Security Services
+### Additional Security Services
 
 ##### AWS Key Management Services (AWS KMS)
 [**AWS Key Management Service (AWS KMS)**](https://aws.amazon.com/kms) enables you to perform encryption operations through the use of **cryptographic keys**. A cryptographic key is a random string of digits used for locking (encrypting) and unlocking (decrypting) data. You can use AWS KMS to create, manage, and use cryptographic keys.
@@ -635,7 +736,7 @@ To learn more about [Amazon EC2 pricing](https://aws.amazon.com/ec2/pricing/)
 **Amazon S3**
 To learn more about [Amazon S3 pricing](https://aws.amazon.com/s3/pricing/)
 
-#### Billing Dashboard
+### Billing Dashboard
 Use the [**AWS Billing & Cost Management dashboard**](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-what-is.html) to pay your AWS bill, monitor your usage, and analyze and control your costs.
 -   Compare your current month-to-date balance with the previous month, and get a forecast of the next month based on current usage.
 -   View month-to-date spend by service.
@@ -900,7 +1001,7 @@ As part of your preparation for the AWS Certified Cloud Practitioner exam, we re
 **Eliminate incorrect response options**
 - Before selecting your response to a question, eliminate any options that you believe to be incorrect.  This strategy helps you to focus on the correct option (or options, for multiple-response questions) and ensure that you have fulfilled all the requirements of the question.
 
-#### Sample questions
+### Sample questions
 
 The following two questions help you become familiar with the differences between multiple-choice and multiple-response questions.
 
@@ -1125,6 +1226,3 @@ _**Strategy:** Think back to the exam domains that were reviewed earlier in this
 - [ ] Amazon Aurora
 - [ ] Amazon Lex
 > **Learn more:**  [Amazon Augmented AI](https://aws.amazon.com/augmented-ai)
-
-
-
