@@ -427,10 +427,6 @@ A non-relational serverless database, don't need to manage underlying instances 
 # Module 6
 ## Security
 ### AWS Shared Responsibility Module
-![[https://github.com/zer0uid/AWS-Cloud-Practitioner-Essentials/blob/main/Pastedimage2020220218100608.png]]
-
-![[Pasted%20image%2020220218100841.png]]
-
 #### Customers: Security in the cloud
 **Customers** are responsible for the security of everything that they create and put _in_ the AWS Cloud.
 
@@ -495,7 +491,6 @@ By following this principle, you help to prevent users or roles from having more
 
 For example, if an employee needs access to only a specific bucket, specify the bucket in the IAM policy. Do this instead of granting the employee access to all of the buckets in your AWS account.
 ```
-![[Pasted image 20220218135153.png]]
 ```
 This example IAM policy allows permission to view a list of objects in the Amazon S3 bucket with ID awsdoc-example-bucket, and also access them.
 ```
@@ -525,8 +520,6 @@ In AWS Organizations, you can centrally control permissions for the accounts in 
 
 **AWS Artifact Reports**
 - AWS Artifact Reports provide compliance reports from third-party auditors. These auditors have tested and verified that AWS is compliant with a variety of global, regional, and industry-specific security standards and regulations. AWS Artifact Reports remains up to date with the latest reports released. You can provide the AWS audit artifacts to your auditors or regulators as evidence of AWS security controls.
-
-![[Pasted image 20220218142936.png]]
 
  **Customer Compliance Center**
  The [**Customer Compliance Center**](https://aws.amazon.com/compliance/customer-center/) contains resources to help you learn more about AWS compliance.
@@ -588,11 +581,9 @@ To learn more about the concepts that were explored in Module 6, review these re
 With CloudWatch, you can create [**alarms**](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html) that automatically perform actions if the value of your metric has gone above or below a predefined threshold.
 
 The CloudWatch [**dashboard**](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Dashboards.html) feature enables you to access all the metrics for your resources from a single location.
-![[Pasted image 20220218193455.png]]
 
 ### AWS CloudTrail
 [**AWS CloudTrail**](https://aws.amazon.com/cloudtrail/) records API calls for your account. The recorded information includes the identity of the API caller, the time of the API call, the source IP address of the API caller, and more.
-![[Pasted image 20220218194056.png]]
 
 **CloudTrail Insights**
 Within CloudTrail, you can also enable [**CloudTrail Insights**](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-insights-events-with-cloudtrail.html). This optional feature allows CloudTrail to automatically detect unusual API activities in your AWS account.
@@ -608,7 +599,6 @@ Trusted Advisor compares its findings to AWS best practices in five categories:
 - service limits. 
 
 For the checks in each category, Trusted Advisor offers a list of recommended actions and additional resources to learn more about AWS best practices.
-![[Pasted image 20220218194617.png]]
 
 ##### Additional resources
 -   [Management and Governance on AWS](https://aws.amazon.com/products/management-tools)
@@ -680,7 +670,6 @@ Your TAM provides expertise across the full range of AWS services. They help you
 [**AWS Marketplace**](https://aws.amazon.com/marketplace) is a digital catalog that includes thousands of software listings from independent software vendors. You can use AWS Marketplace to find, test, and buy software that runs on AWS.
 
 AWS Marketplace offers products in several categories, such as Infrastructure Products, Business Applications, Data Products, and DevOps.
-![[Pasted image 20220218212439.png]]
 
 ##### Additional resources
 -   [AWS Pricing](https://aws.amazon.com/pricing)
