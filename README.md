@@ -427,7 +427,7 @@ A non-relational serverless database, don't need to manage underlying instances 
 # Module 6
 ## Security
 ### AWS Shared Responsibility Module
-![[https://github.com/zer0uid/AWS-Cloud-Practitioner-Essentials/blob/main/Pasted%20image%2020220218100608.png]]
+![[https://github.com/zer0uid/AWS-Cloud-Practitioner-Essentials/blob/main/Pastedimage2020220218100608.png]]
 
 ![[https://raw.githubusercontent.com/zer0uid/AWS-Cloud-Practitioner-Essentials/main/Pasted%20image%2020220218100841.png]]
 
