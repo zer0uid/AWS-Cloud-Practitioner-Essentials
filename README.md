@@ -428,7 +428,7 @@ A non-relational serverless database, don't need to manage underlying instances 
 ## Security
 ### AWS Shared Responsibility Module
 
-!(Shared Responsibility Model)[https://github.com/AbraXa5/AWS-Cloud-Practitioner-Essentials/blob/Restoring-Images/Pasted%20image%2020220218100608.png?raw=true]
+!(Shared Responsibility Model)[https://github.com/AbraXa5/AWS-Cloud-Practitioner-Essentials/blob/Restoring-Images/Pasted%20image%2020220218100608.png]
 
 #### Customers: Security in the cloud
 **Customers** are responsible for the security of everything that they create and put _in_ the AWS Cloud.
